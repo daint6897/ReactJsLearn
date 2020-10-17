@@ -23,12 +23,14 @@ export default class ReduxTest extends Component {
 
     updateState(){
         this.setState({
-            ten :"update ne ahihi"
+            ten :"update ne ahihi",
+            ten :sayings"
         })
     }
     //
     update(e) {
         this.setState({sayings: e.target.value});
+        this.setState({ten: e.target.value});
     }
 
     updateRef(e) {
@@ -51,11 +53,11 @@ export default class ReduxTest extends Component {
     }
   
     render() {
-        
+        const name = this.state.name
         return (
             // <Welcome name="Sara" />
             <div>
-                ahihi
+                ahihi + {name}
             </div>
            
         );
